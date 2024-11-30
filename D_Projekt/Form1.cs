@@ -5,8 +5,7 @@ namespace D_Projekt
 {
     public partial class Form1 : Form
     {
-        //TODO: make more enemys
-        //TODO: make more towers
+        //TODO: make more enemys and towers
         //TODO: balancing
         //TODO: separate keyboard input for enemys and mouse for tanks
         //TODO: make a new image for projectiles, also a background
