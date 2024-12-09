@@ -133,7 +133,7 @@ namespace D_Projekt
             // Debug where Checkpoints are
             foreach (Checkpoint cp in allCheckpointsLvl1)
             {
-                graphics.DrawImage(EnemyBase.Image, cp.X, cp.Y, 50, 50);
+                graphics.DrawImage(Checkpoint.Image, cp.X, cp.Y, 50, 50);
             }
 
             // Debug if range is accurate size

@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|c:\\users\\43664\\source\\repos\\gabelfisch\\towerdefense\\d_projekt\\enemybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|solutionrelative:enemybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|c:\\users\\43664\\source\\repos\\gabelfisch\\towerdefense\\d_projekt\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|solutionrelative:checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|c:\\users\\43664\\source\\repos\\gabelfisch\\towerdefense\\d_projekt\\towerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|solutionrelative:towerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|c:\\users\\43664\\source\\repos\\gabelfisch\\towerdefense\\d_projekt\\enemybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|solutionrelative:enemybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|c:\\users\\43664\\source\\repos\\gabelfisch\\towerdefense\\d_projekt\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|c:\\users\\43664\\source\\repos\\gabelfisch\\towerdefense\\d_projekt\\enemytank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|c:\\users\\43664\\source\\repos\\gabelfisch\\towerdefense\\d_projekt\\gameobjectbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|solutionrelative:gameobjectbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|c:\\users\\43664\\source\\repos\\gabelfisch\\towerdefense\\d_projekt\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,30 +44,17 @@
         },
         {
           "DockedWidth": 153,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TowerBase.cs",
-              "DocumentMoniker": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\TowerBase.cs",
-              "RelativeDocumentMoniker": "TowerBase.cs",
-              "ToolTip": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\TowerBase.cs",
-              "RelativeToolTip": "TowerBase.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T14:07:49.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Checkpoint.cs",
               "DocumentMoniker": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\Checkpoint.cs",
               "RelativeDocumentMoniker": "Checkpoint.cs",
-              "ToolTip": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\Checkpoint.cs",
-              "RelativeToolTip": "Checkpoint.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\Checkpoint.cs*",
+              "RelativeToolTip": "Checkpoint.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T13:38:00.152Z",
               "EditorCaption": ""
@@ -84,27 +67,27 @@
               "RelativeDocumentMoniker": "EnemyTank.cs",
               "ToolTip": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\EnemyTank.cs",
               "RelativeToolTip": "EnemyTank.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAACAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAACAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T13:27:27.614Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "EnemyBase.cs",
               "DocumentMoniker": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\EnemyBase.cs",
               "RelativeDocumentMoniker": "EnemyBase.cs",
               "ToolTip": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\EnemyBase.cs",
               "RelativeToolTip": "EnemyBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAADwv2wAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T13:26:58.499Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -112,7 +95,8 @@
               "RelativeToolTip": "Form1.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwGEAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T13:17:06.997Z"
+              "WhenOpened": "2024-12-09T13:17:06.997Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

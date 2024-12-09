@@ -3,21 +3,18 @@ using System.Threading.Tasks;
 
 namespace D_Projekt
 {
-    internal abstract class EnemyBase
+    internal abstract class EnemyBase : GameObjectEnemy_Tower
     {
         // For the cost of each enemy <subtype of EnemyBase, costs as int>
         public static Dictionary<Type, int> Costes = new() { {typeof(EnemyTank), 12} };
 
         private double[] directionToMove = new double[2]; //TODO: rename again
 
-        public static Image Image { get; protected set; } = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "images", "Tank.png")); // Standard Image
+       
         public static byte Speed { get; protected set; }
         public static int MaxHealth { get; protected set; }
 
-        public int Costs { get; init; }
-        public PointF LocationPointF { get; private set; }
-        public RectangleF Bounds { get; private set; }
-        public int Health { get; set; }
+       public int Health { get; set; }
         public int IndexOfNextCheckpoint { get; set; } = 1;
 
         // For pathFinished event
@@ -30,11 +27,13 @@ namespace D_Projekt
 
         public EnemyBase(Checkpoint[] cpArray) //cpArray needed because there is a Error in the ctor of EnemyTank (CS1729)
         {
+            Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "images", "Tank.png"));
             //Debug.WriteLineIf(Costes.Keys.ToArray()[0] == typeof(EnemyTank), typeof(EnemyTank));
         }
 
         public virtual void SetPointAndRect(Checkpoint cp)
         {
+
             LocationPointF = new Point(cp.X, cp.Y);
             Bounds = new RectangleF(LocationPointF, new Size(50, 50));
         }

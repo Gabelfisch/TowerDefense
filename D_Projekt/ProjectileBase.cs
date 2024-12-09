@@ -8,34 +8,27 @@ using System.Threading.Tasks;
 
 namespace D_Projekt
 {
-    class ProjectileBase
+    class ProjectileBase : GameObjectBase
     {
 
         private readonly int speed;
         private float[] directionToMove = new float[2];
 
-
-        public static Image Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "images", "ProjektileDefault.png")); //Deafult Image
-        public RectangleF Bounds { get; protected set; }
+       
         public EnemyBase Target { get; protected set; }
-
         public int Damage { get; set; }
 
         // for target Hit event
         public delegate void TargetHitHandler(ProjectileBase sender, EnemyBase target, EventArgs e);
         public event TargetHitHandler TargetHit;
 
-        public ProjectileBase(Point point, EnemyBase target, TowerBase sender) 
-            :this(point.X, point.Y, target) 
+        public ProjectileBase(PointF point, EnemyBase target, TowerBase sender) 
+            
         {
             // outsource into child class
             speed = 15;
             Damage = sender.Damage;
-        }
-
-        public ProjectileBase(int x, int y, EnemyBase target)
-        {
-            Bounds = new RectangleF(x, y, 10,10);
+            Bounds = new RectangleF(point, new SizeF(10, 10));
             this.Target = target;
         }
         

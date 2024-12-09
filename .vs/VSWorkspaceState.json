@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\D_Projekt",
+    "\\D_Projekt\\bin",
+    "\\D_Projekt\\bin\\Debug",
+    "\\D_Projekt\\bin\\Debug\\net8.0-windows"
   ],
-  "SelectedNode": "\\D_Projekt.sln",
+  "SelectedNode": "\\D_Projekt\\bin\\Debug\\net8.0-windows\\D_Projekt.exe",
   "PreviewInSolutionExplorer": false
 }

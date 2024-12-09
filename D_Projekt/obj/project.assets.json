@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\43664\\Desktop\\ANP\\2024\\D_Projekt\\D_Projekt.csproj",
+      "projectUniqueName": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\D_Projekt.csproj",
       "projectName": "D_Projekt",
-      "projectPath": "C:\\Users\\43664\\Desktop\\ANP\\2024\\D_Projekt\\D_Projekt.csproj",
+      "projectPath": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\D_Projekt.csproj",
       "packagesPath": "C:\\Users\\43664\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\43664\\Desktop\\ANP\\2024\\D_Projekt\\obj\\",
+      "outputPath": "C:\\Users\\43664\\Source\\Repos\\Gabelfisch\\TowerDefense\\D_Projekt\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Users\\43664\\Documents\\Gabriel\\VisualStudio1\\NuGetPackages"

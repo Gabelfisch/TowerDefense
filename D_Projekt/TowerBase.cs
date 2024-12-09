@@ -2,18 +2,16 @@
 
 namespace D_Projekt
 {
-    class TowerBase
+    class TowerBase : GameObjectEnemy_Tower
     {
         // For the cost of each tower <subtype of TowerBase, costs as int>
         public static Dictionary<Type, int> Costes = new() { { typeof(TowerBase), 30 } };
 
         private readonly Stopwatch cooldownStopwatch = new();
 
-        public static Image Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "images", "TowerDeafult.png")); //Deafult Image
-        public Rectangle Bounds { get; init; }
+
         public RectangleF Range { get; init; }
 
-        public int Costs { get; init; }
         public int RangeInt { get; init; }
         public int Damage { get; set; }
         public double Cooldown { get; init; }
@@ -30,7 +28,7 @@ namespace D_Projekt
             //TODO: outsurce this when child class exists
             #region outsource
             RangeInt = 50;
-            Range = new Rectangle(Bounds.X - RangeInt, Bounds.Y - RangeInt, RangeInt * 2 + Bounds.Width, RangeInt * 2 + Bounds.Height);
+            Range = new Rectangle(Convert.ToInt16(Bounds.X - RangeInt), Convert.ToInt16(Bounds.Y - RangeInt), Convert.ToInt16(RangeInt * 2 + Bounds.Width), Convert.ToInt16(RangeInt * 2 + Bounds.Height));
             Cooldown = 1.5;
             Damage = 74;
             Costs = 30;
