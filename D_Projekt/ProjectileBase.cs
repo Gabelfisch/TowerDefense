@@ -22,14 +22,14 @@ namespace D_Projekt
         public delegate void TargetHitHandler(ProjectileBase sender, EnemyBase target, EventArgs e);
         public event TargetHitHandler TargetHit;
 
-        public ProjectileBase(PointF point, EnemyBase target, TowerBase sender) 
-            
+        public ProjectileBase(PointF point, EnemyBase target, TowerBase sender)    
         {
             // outsource into child class
             speed = 15;
             Damage = sender.Damage;
             Bounds = new RectangleF(point, new SizeF(10, 10));
-            this.Target = target;
+            
+            Target = target;
         }
         
         public void CalculateDirection()
@@ -90,17 +90,13 @@ namespace D_Projekt
         private void CheckIfTargetHit()
         {
             if (Target.Bounds.IntersectsWith(Bounds))
-            {
                 OnTargetHit();
-            }
         }
 
         private void OnTargetHit()
         {
             if (TargetHit != null)
-            {
                 TargetHit(this, Target, EventArgs.Empty);
-            }
         }
 
         public void UpdateProjectile()

@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("D_Projekt")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("TowerDefense")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e50e4e8949c5cda4f5fa91c021cd1639a9d554c3")]
-[assembly: System.Reflection.AssemblyProductAttribute("D_Projekt")]
-[assembly: System.Reflection.AssemblyTitleAttribute("D_Projekt")]
+[assembly: System.Reflection.AssemblyProductAttribute("TowerDefense")]
+[assembly: System.Reflection.AssemblyTitleAttribute("TowerDefense")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

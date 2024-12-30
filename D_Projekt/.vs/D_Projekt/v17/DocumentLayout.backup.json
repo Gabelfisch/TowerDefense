@@ -3,24 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|c:\\users\\43664\\source\\repos\\gabelfisch\\towerdefense\\d_projekt\\enemybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|solutionrelative:enemybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\D_Projekt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:D_Projekt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|c:\\users\\43664\\source\\repos\\gabelfisch\\towerdefense\\d_projekt\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|solutionrelative:checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\GameObjectBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GameObjectBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|c:\\users\\43664\\source\\repos\\gabelfisch\\towerdefense\\d_projekt\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\GameObjectEnemy\u0026Tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GameObjectEnemy\u0026Tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|c:\\users\\43664\\source\\repos\\gabelfisch\\towerdefense\\d_projekt\\enemytank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|solutionrelative:enemytank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\ProjectileBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ProjectileBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|c:\\users\\43664\\source\\repos\\gabelfisch\\towerdefense\\d_projekt\\gameobjectbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|solutionrelative:gameobjectbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\TowerBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TowerBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\Checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\EnemyTank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EnemyTank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\EnemyBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EnemyBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,24 +60,72 @@
         },
         {
           "DockedWidth": 153,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Checkpoint.cs",
-              "DocumentMoniker": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\Checkpoint.cs",
-              "RelativeDocumentMoniker": "Checkpoint.cs",
-              "ToolTip": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\Checkpoint.cs*",
-              "RelativeToolTip": "Checkpoint.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T13:38:00.152Z",
+              "DocumentIndex": 0,
+              "Title": "D_Projekt.csproj",
+              "DocumentMoniker": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\D_Projekt.csproj",
+              "RelativeDocumentMoniker": "D_Projekt.csproj",
+              "ToolTip": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\D_Projekt.csproj",
+              "RelativeToolTip": "D_Projekt.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-30T11:17:44.33Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameObjectEnemy\u0026Tower.cs",
+              "DocumentMoniker": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\GameObjectEnemy\u0026Tower.cs",
+              "RelativeDocumentMoniker": "GameObjectEnemy\u0026Tower.cs",
+              "ToolTip": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\GameObjectEnemy\u0026Tower.cs",
+              "RelativeToolTip": "GameObjectEnemy\u0026Tower.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T16:41:47.328Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "ProjectileBase.cs",
+              "DocumentMoniker": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\ProjectileBase.cs",
+              "RelativeDocumentMoniker": "ProjectileBase.cs",
+              "ToolTip": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\ProjectileBase.cs",
+              "RelativeToolTip": "ProjectileBase.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA1wCAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T16:15:46.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TowerBase.cs",
+              "DocumentMoniker": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\TowerBase.cs",
+              "RelativeDocumentMoniker": "TowerBase.cs",
+              "ToolTip": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\TowerBase.cs",
+              "RelativeToolTip": "TowerBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T14:07:49.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Checkpoint.cs",
+              "DocumentMoniker": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\Checkpoint.cs",
+              "RelativeDocumentMoniker": "Checkpoint.cs",
+              "ToolTip": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\Checkpoint.cs",
+              "RelativeToolTip": "Checkpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAACsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T13:38:00.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "EnemyTank.cs",
               "DocumentMoniker": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\EnemyTank.cs",
               "RelativeDocumentMoniker": "EnemyTank.cs",
@@ -69,44 +133,41 @@
               "RelativeToolTip": "EnemyTank.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAACAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T13:27:27.614Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T13:27:27.614Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "EnemyBase.cs",
               "DocumentMoniker": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\EnemyBase.cs",
               "RelativeDocumentMoniker": "EnemyBase.cs",
               "ToolTip": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\EnemyBase.cs",
               "RelativeToolTip": "EnemyBase.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAADwv2wAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAuwCgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T13:26:58.499Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T13:26:58.499Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwGEAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAD4v3QAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T13:17:06.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T13:17:06.997Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "GameObjectBase.cs",
               "DocumentMoniker": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\GameObjectBase.cs",
               "RelativeDocumentMoniker": "GameObjectBase.cs",
               "ToolTip": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\GameObjectBase.cs",
               "RelativeToolTip": "GameObjectBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T13:00:03.516Z",
               "EditorCaption": ""

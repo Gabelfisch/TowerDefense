@@ -14,7 +14,7 @@ namespace D_Projekt
         public static byte Speed { get; protected set; }
         public static int MaxHealth { get; protected set; }
 
-       public int Health { get; set; }
+        public int Health { get; set; }
         public int IndexOfNextCheckpoint { get; set; } = 1;
 
         // For pathFinished event
@@ -27,13 +27,11 @@ namespace D_Projekt
 
         public EnemyBase(Checkpoint[] cpArray) //cpArray needed because there is a Error in the ctor of EnemyTank (CS1729)
         {
-            Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "images", "Tank.png"));
             //Debug.WriteLineIf(Costes.Keys.ToArray()[0] == typeof(EnemyTank), typeof(EnemyTank));
         }
 
         public virtual void SetPointAndRect(Checkpoint cp)
         {
-
             LocationPointF = new Point(cp.X, cp.Y);
             Bounds = new RectangleF(LocationPointF, new Size(50, 50));
         }
@@ -109,7 +107,6 @@ namespace D_Projekt
                 IndexOfNextCheckpoint++;
                 if (cpArray.Length == IndexOfNextCheckpoint)
                 {
-                    //TODO: Event machen bei letztem Checkpoint
                     OnPathFinished(EventArgs.Empty);
                     return;
                 }

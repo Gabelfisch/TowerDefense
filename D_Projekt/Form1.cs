@@ -17,8 +17,6 @@ namespace D_Projekt
         // For the UI
         private readonly Bitmap bitmap; //TODO: Ask Fr. Mayer why static and readonly are allowed on their own, but not together
 
-        private static readonly Image heartImg = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "images", "HeartTD.png"));
-        private static readonly Image bgImg = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "images", "BG.png" ));
         private static readonly List<Image> allLives = [];
 
         // Lists of the game Objects
@@ -58,6 +56,7 @@ namespace D_Projekt
         // for stats at the end
         private static int projectilesShot = 0;
         private static int enemysSpawned = 0;
+        private static int enemysKilled = 0;
         private static int towersPlaced = 0;
 
         #endregion
@@ -68,17 +67,15 @@ namespace D_Projekt
         {
             InitializeComponent();
 
-            //EnemyTank a = new(allCheckpointsLvl1[0]);
-            //Controls.Add(a.Panel);
-
+            // Timers for Adding Money over Time
             gameTick.Tick += GameTick_Tick; 
             moneyTick.Tick += MoneyTick_Tick;
 
             // Bitmap where everthing is drawn on.
             bitmap = new Bitmap(ClientSize.Width, ClientSize.Height);
-            this.DoubleBuffered = true; // To avoid Flickering IMPORTANT haha
 
-            this.KeyPreview = true; // This is needed for handling keydown events, even if eg. a button in in focus
+            DoubleBuffered = true; // To avoid Flickering IMPORTANT haha
+            KeyPreview = true; // This is needed for handling keydown events, even if eg. a button in in focus
 
             // fill up lives
             AddLives();
@@ -95,7 +92,7 @@ namespace D_Projekt
         {
             for (int i = 0; i < 10; i++)
             {
-                allLives.Add(heartImg);
+                allLives.Add(Picture.Heart);
             }
         }
 
@@ -105,42 +102,42 @@ namespace D_Projekt
         /// </summary>
         private void DrawObjects()
         {
+            // creating Graphics Object where erverything is Drawn on, based on a Bitmap. 
             using Graphics graphics = Graphics.FromImage(bitmap);
             graphics.Clear(Color.White);
 
             // Draw background
-            graphics.DrawImage(bgImg, 0, 0, 1000, 800);
-
-
-            // Draw enemys
-            foreach (EnemyBase enemy in allEnemies)
-            {
-                graphics.DrawImage(EnemyBase.Image, enemy.LocationPointF.X, enemy.LocationPointF.Y, 30, 30);
-            }
-
-            // Draw Towers
-            allTowers.ForEach(tow => graphics.DrawImage(TowerBase.Image, tow.Bounds));
+            graphics.DrawImage(Picture.BackGround, 0, 0, 1000, 800);
 
             // Draw Projectiles (later before towers, after enemies
-            allProjectiles.ForEach(proj => graphics.DrawImage(ProjectileBase.Image, proj.Bounds.Location));
+            allProjectiles.ForEach(proj => graphics.DrawImage(Picture.Projectile, proj.Bounds.Location));
 
-            // Draw lives
-            PointF whereToPlaceLive = new Point(20, 20);
-            allLives.ForEach(live => { graphics.DrawImage(live, new RectangleF(whereToPlaceLive, new Size(30, 30))); whereToPlaceLive.X += 40; });
+            // Draw Towers
+            allTowers.ForEach(tow => graphics.DrawImage(Picture.TowerBase, tow.Bounds));
 
+            // Draw enemys
+            allEnemies.ForEach(enemy => graphics.DrawImage(Picture.EnemyTank, enemy.LocationPointF.X, enemy.LocationPointF.Y, 30, 30));
+            
+            // Draw hearts
+            int XOfHeart = 20;
+            foreach (Image live in allLives)
+            {
+                graphics.DrawImage(live, new RectangleF(new PointF(XOfHeart, 20), new Size(30, 30)));
+                XOfHeart += 40;
+            }
+
+            //Draw Tower Range
+            allTowers.ForEach(tow => graphics.DrawRectangle(new Pen(Color.Blue), tow.Range));
+ 
             // ------- Debug visualisations -------
             #region Debug
-            // Debug where Checkpoints are
-            foreach (Checkpoint cp in allCheckpointsLvl1)
-            {
-                graphics.DrawImage(Checkpoint.Image, cp.X, cp.Y, 50, 50);
-            }
 
-            // Debug if range is accurate size
-            foreach (TowerBase tw in allTowers)
-            {
-                graphics.DrawRectangle(new Pen(Color.Blue), tw.Range);
-            }
+            // Debug where Checkpoints are, uncomment for visible Checkpoints
+            //foreach (Checkpoint cp in allCheckpointsLvl1)
+            //{
+            //    graphics.DrawImage(Pictures.Checkpoint, cp.X, cp.Y, 50, 50);
+            //}
+
             #endregion 
 
         }
@@ -153,10 +150,10 @@ namespace D_Projekt
         /// <param name="y">left top corner Y coordinate position, integer</param>
         public void PlaceNewTower(int x, int y)
         {
-            if (moneyTowers >= TowerBase.Costes[typeof(TowerBase)]) //Modify Class for diff. towers
+            if (moneyTowers >= TowerBase.Costs[typeof(TowerBase)]) //Modify Class for diff. towers
             {
                 isTowerPlacing = false;
-                moneyTowers -= TowerBase.Costes[typeof(TowerBase)];
+                moneyTowers -= TowerBase.Costs[typeof(TowerBase)];
                 towersPlaced++;
 
                 allTowers.Add(new TowerBase(x, y));
@@ -187,27 +184,28 @@ namespace D_Projekt
         /// </summary>
         public void GameFinished()
         {
-            // Stop timer that the game stops too
+            // Stop timer to stop the game 
             gameTick.Stop();
 
+            // Send out Death message and statistics
             string deathMessage = $"Game Finished!!!\n" +
                 $"Statistics:\n" +
                 $"Towers Placed:    {towersPlaced}\n" +
-                $"Enemies Killed:   {enemysSpawned - 10}\n" +
+                $"Enemies Swpawned:   {enemysSpawned}\n" +
+                $"Enemies Killed:   {enemysKilled}\n" +
                 $"Projectiles shot: {projectilesShot}\n" +
                 $"To continue, click OK";
+
             MessageBox.Show(deathMessage, "Game Finished", MessageBoxButtons.OK);
 
+            // Ask Player if he wants to play another game
             bool isAgain = MessageBox.Show("Do you want to play another round?", "Another one?", MessageBoxButtons.YesNo) == DialogResult.Yes ? true : false;
+            
             if (isAgain)
-            {
                 ResetandRestartGame();
-            }
             else
-            {
                 Close();
-            }
-
+            
         }
 
         /// <summary>
@@ -216,9 +214,8 @@ namespace D_Projekt
         /// </summary>
         public void ResetandRestartGame()
         {
-            // kill all enemys, projectiles and towers //TODO: remove all event handlers
-
-
+            
+            // Delete all Enemies
             foreach (EnemyBase enemy in allEnemies)
             {
                 enemy.DeathEvent -= EnemyBase_Death;
@@ -226,16 +223,14 @@ namespace D_Projekt
             }
             allEnemies.Clear();
 
+            // Delete all Projectiles
             foreach (ProjectileBase proj in allProjectiles)
-            {
                 proj.TargetHit -= ProjectileBase_TargetHit;
-            }
             allProjectiles.Clear();
 
+            // Delete all Towers
             foreach (TowerBase tower in allTowers)
-            {
                 tower.ShootEvent -= TowerBase_Shoot;
-            }
             allTowers.Clear();
 
             // refill lives
@@ -249,7 +244,7 @@ namespace D_Projekt
             gameTick.Start();
         }
 
-        #endregion
+#endregion
         // ------------------ event handler ------------------
         #region event handler
 
@@ -268,17 +263,14 @@ namespace D_Projekt
         {
             switch (e.Button)
             {
-                case MouseButtons.Left:
-                    break;
                 case MouseButtons.Right:
                     if (isTowerPlacing) PlaceNewTower(e.Location.X, e.Location.Y);
                     break;
                 case MouseButtons.Middle:
-                    Debug.WriteLine($"{e.Location.X} | {e.Location.Y}"); break;
+                    Debug.WriteLine($"{e.Location.X} | {e.Location.Y}"); 
+                    break;
                 case MouseButtons.XButton1:
                     isTowerPlacing = !isTowerPlacing;
-                    break;
-                case MouseButtons.XButton2:
                     break;
             }
         }
@@ -290,9 +282,7 @@ namespace D_Projekt
             {
                 case Keys.Escape:
                     Debug.WriteLine("ssdasdf");
-                    Close(); break;
-                case Keys.Space:
-                    Debug.WriteLine("yayyyyyy");
+                    Close(); 
                     break;
                 case Keys.T:
                     SpawnEnemy();
@@ -302,14 +292,17 @@ namespace D_Projekt
 
         private void TowerBase_Shoot(TowerBase sender, EventArgs e, EnemyBase target)
         {
-            //Debug.WriteLine("shoot event Triggered");
+            // Create new Projectile
             allProjectiles.Add(new ProjectileBase(sender.Bounds.Location, target, sender));
             allProjectiles[^1].TargetHit += ProjectileBase_TargetHit;
+            
+            // Uptdate Statistics
             projectilesShot++;
         }
 
         private void EnemyBase_PathFinished(EnemyBase sender, EventArgs e)
         {
+            // make the Enemy ready to get Garbage collected
             sender.PathFinishedEvent -= EnemyBase_PathFinished;
             sender.DeathEvent -= EnemyBase_PathFinished;
             allEnemies.Remove(sender);
@@ -352,6 +345,7 @@ namespace D_Projekt
             sender.DeathEvent -= EnemyBase_Death;
             allEnemies.Remove(sender);
             moneyTowers += Convert.ToInt16(sender.Costs * 1.2);
+            enemysKilled++;
         } 
 
 

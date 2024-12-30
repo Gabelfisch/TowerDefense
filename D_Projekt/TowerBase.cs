@@ -4,11 +4,11 @@ namespace D_Projekt
 {
     class TowerBase : GameObjectEnemy_Tower
     {
-        // For the cost of each tower <subtype of TowerBase, costs as int>
-        public static Dictionary<Type, int> Costes = new() { { typeof(TowerBase), 30 } };
+        // For the cost of each tower <subtype of TowerBase, costs as int> 
+        // TODO: Add Enum for every Type of tower for Readabillity
+        public static Dictionary<Type, int> Costs = new() { { typeof(TowerBase), 30 } };
 
         private readonly Stopwatch cooldownStopwatch = new();
-
 
         public RectangleF Range { get; init; }
 
@@ -31,7 +31,7 @@ namespace D_Projekt
             Range = new Rectangle(Convert.ToInt16(Bounds.X - RangeInt), Convert.ToInt16(Bounds.Y - RangeInt), Convert.ToInt16(RangeInt * 2 + Bounds.Width), Convert.ToInt16(RangeInt * 2 + Bounds.Height));
             Cooldown = 1.5;
             Damage = 74;
-            Costs = 30;
+            base.Costs = 30;
             #endregion  
         }
 
