@@ -17,13 +17,10 @@ namespace D_Projekt
         public int Health { get; set; }
         public int IndexOfNextCheckpoint { get; set; } = 1;
 
-        // For pathFinished event
-        public delegate void PathFinishedHandler(EnemyBase sender, EventArgs e); 
+        // Events
         public event PathFinishedHandler PathFinishedEvent;
-
-        // For death event
-        public delegate void DeathHandler(EnemyBase sender, EventArgs eventArgs);
         public event DeathHandler DeathEvent;
+        public event CheckpointReachedHandler CheckpointReachedEvent;
 
         public EnemyBase(Checkpoint[] cpArray) //cpArray needed because there is a Error in the ctor of EnemyTank (CS1729)
         {
@@ -103,11 +100,11 @@ namespace D_Projekt
             int cpY = cpArray[IndexOfNextCheckpoint].Y;
             if (Math.Abs(cpX - LocationPointF.X) <= Speed && Math.Abs(cpY - LocationPointF.Y) <= Speed)
             {
-                Form1.moneyEnemys += Costs / Form1.allCheckpointsLvl1.Count;   
+                OnCheckpointReached();   
                 IndexOfNextCheckpoint++;
                 if (cpArray.Length == IndexOfNextCheckpoint)
                 {
-                    OnPathFinished(EventArgs.Empty);
+                    OnPathFinished();
                     return;
                 }
                 CalculateDistanceToMove(cpArray);
@@ -122,15 +119,11 @@ namespace D_Projekt
             }
         }
 
-        public void OnPathFinished(EventArgs e)
-        {
-            PathFinishedEvent?.Invoke(this, e);
-        }
+        public void OnPathFinished() => PathFinishedEvent?.Invoke(this);
 
-        public void OnDeath()
-        {
-            DeathEvent?.Invoke(this, EventArgs.Empty);
-        }
+        public void OnDeath() => DeathEvent?.Invoke(this); 
+
+        public void OnCheckpointReached() => CheckpointReachedEvent?.Invoke(this);
 
         public void UpdateEnemy(Checkpoint[] cpArray)
         {
@@ -141,4 +134,7 @@ namespace D_Projekt
             
         }
     }
+    internal delegate void DeathHandler(EnemyBase sender);
+    internal delegate void PathFinishedHandler(EnemyBase sender);
+    internal delegate void CheckpointReachedHandler(EnemyBase sender);
 }

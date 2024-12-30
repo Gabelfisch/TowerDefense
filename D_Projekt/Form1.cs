@@ -171,10 +171,16 @@ namespace D_Projekt
                 allEnemies.Add(new EnemyTank([.. allCheckpointsLvl1]));
                 allEnemies[^1].PathFinishedEvent += EnemyBase_PathFinished;
                 allEnemies[^1].DeathEvent += EnemyBase_Death;
+                allEnemies[^1].CheckpointReachedEvent += EnemyBase_CheckpointReachedEvent;
                 enemysSpawned++;
 
                 moneyEnemys -= EnemyBase.Costes[allEnemies[^1].GetType()];
             }
+        }
+
+        private void EnemyBase_CheckpointReachedEvent(EnemyBase sender)
+        {
+            moneyEnemys += sender.Costs / allCheckpointsLvl1.Count;
         }
 
 
@@ -220,6 +226,7 @@ namespace D_Projekt
             {
                 enemy.DeathEvent -= EnemyBase_Death;
                 enemy.PathFinishedEvent -= EnemyBase_PathFinished;
+                enemy.CheckpointReachedEvent -= EnemyBase_CheckpointReachedEvent;
             }
             allEnemies.Clear();
 
@@ -290,7 +297,7 @@ namespace D_Projekt
             }
         }
 
-        private void TowerBase_Shoot(TowerBase sender, EventArgs e, EnemyBase target)
+        private void TowerBase_Shoot(TowerBase sender, EnemyBase target)
         {
             // Create new Projectile
             allProjectiles.Add(new ProjectileBase(sender.Bounds.Location, target, sender));
@@ -300,11 +307,12 @@ namespace D_Projekt
             projectilesShot++;
         }
 
-        private void EnemyBase_PathFinished(EnemyBase sender, EventArgs e)
+        private void EnemyBase_PathFinished(EnemyBase sender)
         {
             // make the Enemy ready to get Garbage collected
             sender.PathFinishedEvent -= EnemyBase_PathFinished;
             sender.DeathEvent -= EnemyBase_PathFinished;
+            sender.CheckpointReachedEvent -= EnemyBase_PathFinished;
             allEnemies.Remove(sender);
 
 
@@ -328,7 +336,7 @@ namespace D_Projekt
             Debug.WriteLine(target.Health);
         }
 
-        private void EnemyBase_Death(EnemyBase sender, EventArgs e)
+        private void EnemyBase_Death(EnemyBase sender)
         {
             ProjectileBase[] allProjectilesCopy = allProjectiles.ToArray();
 
@@ -343,7 +351,10 @@ namespace D_Projekt
 
             sender.PathFinishedEvent -= EnemyBase_PathFinished;
             sender.DeathEvent -= EnemyBase_Death;
+            sender.CheckpointReachedEvent -= EnemyBase_CheckpointReachedEvent;
+
             allEnemies.Remove(sender);
+
             moneyTowers += Convert.ToInt16(sender.Costs * 1.2);
             enemysKilled++;
         } 

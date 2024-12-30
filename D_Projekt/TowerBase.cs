@@ -6,7 +6,7 @@ namespace D_Projekt
     {
         // For the cost of each tower <subtype of TowerBase, costs as int> 
         // TODO: Add Enum for every Type of tower for Readabillity
-        public static Dictionary<Type, int> Costs = new() { { typeof(TowerBase), 30 } };
+        public static new Dictionary<Type, int> Costs = new() { { typeof(TowerBase), 30 } };
 
         private readonly Stopwatch cooldownStopwatch = new();
 
@@ -17,7 +17,6 @@ namespace D_Projekt
         public double Cooldown { get; init; }
 
         // For the Shoot event
-        public delegate void ShootHandler(TowerBase sender, EventArgs e, EnemyBase target);
         public event ShootHandler ShootEvent;
 
         public TowerBase(int x, int y)
@@ -43,7 +42,7 @@ namespace D_Projekt
                 {
                     if (Range.IntersectsWith(enemy.Bounds))
                     {
-                        OnShoot(EventArgs.Empty, enemy); //TODO: find out how to set the event Args
+                        OnShoot(enemy); //TODO: find out how to set the event Args
                         cooldownStopwatch.Restart();
                         return; // makes that the tower only shoots one time.
                     }
@@ -51,11 +50,11 @@ namespace D_Projekt
             }
         }
 
-        public void OnShoot(EventArgs e, EnemyBase target)
+        public void OnShoot(EnemyBase target)
         {
             if (ShootEvent != null)
             {
-                ShootEvent(this, e, target); // Raise the event
+                ShootEvent(this, target); // Raise the event
             }
         }
 
@@ -65,4 +64,5 @@ namespace D_Projekt
         }
 
     }
+    internal delegate void ShootHandler(TowerBase sender, EnemyBase target);
 }
