@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|c:\\users\\43664\\source\\repos\\gabelfisch\\towerdefense\\d_projekt\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|c:\\users\\43664\\source\\repos\\gabelfisch\\towerdefense\\d_projekt\\enemybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|solutionrelative:enemybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|c:\\users\\43664\\source\\repos\\gabelfisch\\towerdefense\\d_projekt\\gameobjectenemy\u0026tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E01C5FA3-34AA-447F-972C-27555FCB8637}|D_Projekt.csproj|solutionrelative:gameobjectenemy\u0026tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +22,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameObjectEnemy\u0026Tower.cs",
+              "DocumentMoniker": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\GameObjectEnemy\u0026Tower.cs",
+              "RelativeDocumentMoniker": "GameObjectEnemy\u0026Tower.cs",
+              "ToolTip": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\GameObjectEnemy\u0026Tower.cs",
+              "RelativeToolTip": "GameObjectEnemy\u0026Tower.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T13:37:56.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -25,8 +50,17 @@
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EnemyBase.cs",
+              "DocumentMoniker": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\EnemyBase.cs",
+              "RelativeDocumentMoniker": "EnemyBase.cs",
+              "ToolTip": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\EnemyBase.cs",
+              "RelativeToolTip": "EnemyBase.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwB8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T13:32:38.964Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -36,7 +70,7 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\43664\\source\\repos\\Gabelfisch\\TowerDefense\\D_Projekt\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAALAAAAAAAAAAAAAjwK4AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAwCMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-30T12:30:39.724Z",
               "EditorCaption": ""

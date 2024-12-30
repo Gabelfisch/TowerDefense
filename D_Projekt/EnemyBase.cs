@@ -30,7 +30,7 @@ namespace D_Projekt
         public virtual void SetPointAndRect(Checkpoint cp)
         {
             LocationPointF = new Point(cp.X, cp.Y);
-            Bounds = new RectangleF(LocationPointF, new Size(50, 50));
+            Bounds = new RectangleF(LocationPointF, new Size(30, 30));
         }
 
         public void CalculateDistanceToMove(Checkpoint[] cpArray)

@@ -15,7 +15,7 @@ namespace D_Projekt
         #region fields
 
         // For the UI
-        private readonly Bitmap bitmap; //TODO: Ask Fr. Mayer why static and readonly are allowed on their own, but not together
+        private readonly Bitmap bitmap;
 
         private static readonly List<Image> allLives = [];
 
@@ -43,15 +43,20 @@ namespace D_Projekt
             Enabled = true
         };
 
-
         // for placing the tower
         private static bool isTowerPlacing = false;
 
+        // Hearts
+        private int numOfHearts = 10;
+        private Size heartSize = new Size(30, 30);
+
         // money system
-        private static int moneyTowers = 60;
-        public static int moneyEnemys = 30; // public because must be editable in enemy base
-        private static int everyTickMoneyEnemys = 12;
-        private static int everyTickMoneyTowers = 5;
+        private const int STARTMONEYTOWERS = 60;
+        private const int STARTMONEYENEMYS = 30;
+        private static int moneyTowers = STARTMONEYTOWERS;
+        private static int moneyEnemys = STARTMONEYENEMYS;
+        private const int EVERYTICKMONEYTOWERS = 5;
+        private const int EVERYTICKMONEYENEMYS = 12;
 
         // for stats at the end
         private static int projectilesShot = 0;
@@ -90,7 +95,7 @@ namespace D_Projekt
         /// </summary>
         private void AddLives()
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < numOfHearts; i++)
             {
                 allLives.Add(Picture.Heart);
             }
@@ -107,22 +112,22 @@ namespace D_Projekt
             graphics.Clear(Color.White);
 
             // Draw background
-            graphics.DrawImage(Picture.BackGround, 0, 0, 1000, 800);
+            graphics.DrawImage(Picture.BackGround, 0, 0, this.Width, this.Height);
 
             // Draw Projectiles (later before towers, after enemies
-            allProjectiles.ForEach(proj => graphics.DrawImage(Picture.Projectile, proj.Bounds.Location));
+            allProjectiles.ForEach(proj => graphics.DrawImage(Picture.Projectile, proj.Bounds));
 
             // Draw Towers
             allTowers.ForEach(tow => graphics.DrawImage(Picture.TowerBase, tow.Bounds));
 
             // Draw enemys
-            allEnemies.ForEach(enemy => graphics.DrawImage(Picture.EnemyTank, enemy.LocationPointF.X, enemy.LocationPointF.Y, 30, 30));
+            allEnemies.ForEach(enemy => graphics.DrawImage(Picture.EnemyTank,enemy.Bounds));
             
             // Draw hearts
             int XOfHeart = 20;
             foreach (Image live in allLives)
             {
-                graphics.DrawImage(live, new RectangleF(new PointF(XOfHeart, 20), new Size(30, 30)));
+                graphics.DrawImage(live, new RectangleF(new PointF(XOfHeart, 20), heartSize));
                 XOfHeart += 40;
             }
 
@@ -233,19 +238,21 @@ namespace D_Projekt
             // Delete all Projectiles
             foreach (ProjectileBase proj in allProjectiles)
                 proj.TargetHit -= ProjectileBase_TargetHit;
+
             allProjectiles.Clear();
 
             // Delete all Towers
             foreach (TowerBase tower in allTowers)
                 tower.ShootEvent -= TowerBase_Shoot;
+
             allTowers.Clear();
 
             // refill lives
             AddLives();
 
             // reset money
-            moneyTowers = 60;
-            moneyEnemys = 30;
+            moneyTowers = STARTMONEYTOWERS;
+            moneyEnemys = STARTMONEYENEMYS;
 
             // start the game
             gameTick.Start();
@@ -389,8 +396,8 @@ namespace D_Projekt
         private void MoneyTick_Tick(Object? sender, EventArgs e)
         {
             // adding money over time
-            moneyEnemys += everyTickMoneyEnemys;
-            moneyTowers += everyTickMoneyTowers;
+            moneyEnemys += EVERYTICKMONEYTOWERS;
+            moneyTowers += EVERYTICKMONEYENEMYS;
         }
         #endregion
 
